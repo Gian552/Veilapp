@@ -1,0 +1,37 @@
+# VEIL edge proxy: TLS termination, no access logs, minimal headers.
+#
+# Caddy writes NO access log unless a `log` directive is present in a site
+# block; there is none below. Runtime/error logs are discarded too, because
+# TLS handshake errors include client addresses. To debug, temporarily change
+# `output discard` to `output stderr` and revert afterwards.
+{
+	admin off
+	log default {
+		output discard
+	}
+}
+
+{$VEIL_DOMAIN} {
+	encode zstd gzip
+
+	header {
+		Strict-Transport-Security "max-age=63072000; includeSubDomains"
+		-Server
+		-Via
+	}
+
+	reverse_proxy veil:8787 {
+		# The app needs none of these; dropping them keeps them out of every
+		# later processing step. X-Forwarded-For is overwritten with the
+		# direct peer and used by the app only for in-memory, HMAC-keyed
+		# rate limiting (VEIL_TRUST_PROXY=true).
+		header_up -User-Agent
+		header_up -Referer
+		header_up -Accept-Language
+		header_up -Cookie
+		header_up -Forwarded
+		header_up -X-Real-IP
+		header_up X-Forwarded-For {remote_host}
+		header_down -Server
+	}
+}

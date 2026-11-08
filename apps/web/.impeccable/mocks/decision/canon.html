@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>VEIL – Category standard</title>
+<style>
+:root{--b0:#121316;--b1:#1b1c1f;--b2:#25272b;--line:#2c2e33;--blue:#3a76f0;--ink:#e9eaec;--mute:#9a9da4}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;background:var(--b1);color:var(--ink);font:15px/1.5 system-ui,-apple-system,'Segoe UI',sans-serif}
+.app{display:grid;grid-template-columns:340px 1fr;height:900px}
+.rail{background:var(--b0);border-right:1px solid var(--line)}
+.top{height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-weight:600}
+.av{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:600}
+input{margin:0 16px 10px;width:308px;height:38px;border-radius:19px;border:0;background:var(--b2);color:var(--ink);padding:0 16px;font:inherit}
+.row{display:grid;grid-template-columns:48px 1fr auto;gap:12px;align-items:center;padding:10px 16px}
+.row.on{background:var(--b2)}
+.row .av{width:48px;height:48px;font-size:17px}
+.row span{display:block;color:var(--mute);font-size:13px}
+.c{background:var(--blue);color:#fff;min-width:20px;height:20px;border-radius:10px;font-size:11px;text-align:center;line-height:20px}
+.main{display:flex;flex-direction:column}
+.head{height:64px;display:flex;align-items:center;gap:12px;padding:0 20px;border-bottom:1px solid var(--line);font-weight:600}
+.msgs{flex:1;padding:24px 32px;display:flex;flex-direction:column;gap:8px}
+.m{max-width:520px;padding:9px 14px;border-radius:18px}
+.in{background:var(--b2)}
+.out{align-self:flex-end;background:var(--blue);color:#fff}
+.comp{margin:0 20px 20px;height:46px;border-radius:23px;background:var(--b2);display:flex;align-items:center;padding:0 18px;color:var(--mute)}
+</style></head><body><div class="app">
+<aside class="rail"><div class="top">VEIL<div class="av" style="background:#5b6cc7">VF</div></div>
+ <input placeholder="Search or enter a username">
+ <div class="row on"><div class="av" style="background:#2e8b74">SC</div><div><b>SilentComet</b><span>Let us compare numbers.</span></div><div></div></div>
+ <div class="row"><div class="av" style="background:#b55b8f">QM</div><div><b>QuantumMango</b><span>Got the file, thank you.</span></div><div class="c">2</div></div>
+ <div class="row"><div class="av" style="background:#8a7a3c">QO</div><div><b>QuietOtter</b><span>Are you there?</span></div><div></div></div>
+</aside>
+<main class="main"><div class="head"><div class="av" style="background:#2e8b74">SC</div>SilentComet</div>
+ <div class="msgs"><div class="m out">Hi. This one is end-to-end encrypted.</div><div class="m in">Good. Let us compare numbers when we meet.</div><div class="m out">Deal. Bring the twelve groups.</div></div>
+ <div class="comp">Message</div></main>
+</div></body></html>

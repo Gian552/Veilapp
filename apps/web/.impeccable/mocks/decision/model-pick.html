@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>VEIL – Passport</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&family=Public+Sans:wght@400;500;600&display=swap">
+<style>
+:root{--n0:#0d1529;--n1:#121c33;--n2:#1a2744;--n3:#24345a;--line:#223155;--gold:#d4b26a;--gold2:#ead19a;--ink:#e9e4d6;--mute:#8e9abb;--faint:#64719a}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;background:var(--n1);color:var(--ink);font:15px/1.5 'Public Sans',system-ui,sans-serif}
+.app{display:grid;grid-template-columns:320px 1fr 340px;height:900px}
+.rail{background:var(--n0);border-right:1px solid var(--line)}
+.top{padding:26px 24px;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:center}
+.top b{font:700 22px 'Libre Caslon Text',serif;letter-spacing:.06em;color:var(--gold)}
+.top span{font-size:12px;color:var(--mute);display:block}
+input{margin:18px 24px 6px;width:272px;height:40px;border-radius:8px;border:1px solid var(--line);background:var(--n1);color:var(--ink);padding:0 14px;font:inherit}
+.hint{font-size:12px;color:var(--faint);margin:0 24px 12px}
+.row{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:center;padding:12px 24px;border-top:1px solid var(--line)}
+.row.on{background:var(--n2)}
+.row b{font:400 16px 'Libre Caslon Text',serif}
+.row span{display:block;font-size:13px;color:var(--mute)}
+.main{display:flex;flex-direction:column}
+.head{height:76px;display:flex;align-items:center;gap:14px;padding:0 28px;border-bottom:1px solid var(--line)}
+.head b{font:400 20px 'Libre Caslon Text',serif}
+.head small{display:block;font-size:12px;color:var(--mute)}
+.msgs{flex:1;padding:30px 40px;display:flex;flex-direction:column;gap:10px}
+.m{max-width:520px;padding:11px 16px;border-radius:14px}
+.in{background:var(--n2)}
+.out{align-self:flex-end;background:#2b3557;border:1px solid rgba(212,178,106,.3)}
+.comp{margin:0 28px 26px;height:52px;border-radius:12px;border:1px solid var(--n3);background:var(--n0);display:flex;align-items:center;padding:0 18px;color:var(--faint)}
+.side{background:var(--n0);border-left:1px solid var(--line);padding:26px 24px;text-align:center}
+.side h3{font:400 20px 'Libre Caslon Text',serif;margin-bottom:16px}
+.doc{margin-top:18px;font:400 17px/1.6 'Libre Caslon Text',serif;letter-spacing:.08em;color:var(--gold2)}
+.ok{margin-top:22px;width:100%;height:42px;border:1px solid var(--gold);border-radius:8px;background:transparent;color:var(--gold);font:600 14px 'Public Sans'}
+</style></head><body>
+<svg width="0" height="0"><defs>
+<g id="ros">
+ <circle r="19" fill="none" stroke="currentColor" stroke-width=".5"/>
+ <g fill="none" stroke="currentColor" stroke-width=".45">
+  <ellipse rx="18" ry="6"/><ellipse rx="18" ry="6" transform="rotate(20)"/><ellipse rx="18" ry="6" transform="rotate(40)"/><ellipse rx="18" ry="6" transform="rotate(60)"/><ellipse rx="18" ry="6" transform="rotate(80)"/><ellipse rx="18" ry="6" transform="rotate(100)"/><ellipse rx="18" ry="6" transform="rotate(120)"/><ellipse rx="18" ry="6" transform="rotate(140)"/><ellipse rx="18" ry="6" transform="rotate(160)"/>
+  <ellipse rx="11" ry="3.5" transform="rotate(10)"/><ellipse rx="11" ry="3.5" transform="rotate(55)"/><ellipse rx="11" ry="3.5" transform="rotate(100)"/><ellipse rx="11" ry="3.5" transform="rotate(145)"/>
+ </g></g></defs></svg>
+<div class="app">
+<aside class="rail">
+ <div class="top"><svg width="44" height="44" viewBox="-21 -21 42 42" style="color:#d4b26a"><use href="#ros"/></svg><div><b>VEIL</b><span>VelvetFalcon</span></div></div>
+ <input placeholder="Username, e.g. SilentComet"><p class="hint">If this person exists, they will receive your messages.</p>
+ <div class="row on"><svg width="42" height="42" viewBox="-21 -21 42 42" style="color:#9fb6e8"><use href="#ros"/></svg><div><b>SilentComet</b><span>Let us compare numbers.</span></div></div>
+ <div class="row"><svg width="42" height="42" viewBox="-21 -21 42 42" style="color:#c9a0d8"><use href="#ros" transform="rotate(30)"/></svg><div><b>QuantumMango</b><span>Got the file, thank you.</span></div></div>
+ <div class="row"><svg width="42" height="42" viewBox="-21 -21 42 42" style="color:#9fd3c0"><use href="#ros" transform="rotate(60)"/></svg><div><b>QuietOtter</b><span>Are you there?</span></div></div>
+</aside>
+<main class="main">
+ <div class="head"><svg width="40" height="40" viewBox="-21 -21 42 42" style="color:#9fb6e8"><use href="#ros"/></svg><div><b>SilentComet</b><small>Not verified</small></div></div>
+ <div class="msgs">
+  <div class="m out">Hi. This one is end-to-end encrypted.</div>
+  <div class="m in">Good. Let us compare numbers when we meet.</div>
+  <div class="m out">Deal. Bring the twelve groups.</div>
+ </div>
+ <div class="comp">Message SilentComet</div>
+</main>
+<aside class="side"><h3>Safety number</h3>
+ <svg width="150" height="150" viewBox="-21 -21 42 42" style="color:#d4b26a"><use href="#ros"/></svg>
+ <div class="doc">57350 11450 91515<br>39960 60405 93053<br>80348 48299 85839<br>98358 82142 87534</div>
+ <button class="ok">Numbers match</button></aside>
+</div></body></html>

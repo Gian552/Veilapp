@@ -1,0 +1,25 @@
+{
+  "name": "veil",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "build": "npm run build -w @veil/server && npm run build -w @veil/web",
+    "dev:server": "npm run dev -w @veil/server",
+    "dev:web": "npm run dev -w @veil/web",
+    "audit:deps": "npm audit --omit=dev"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "typescript": "7.0.2",
+    "vitest": "5.0.5"
+  }
+}

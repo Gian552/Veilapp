@@ -1,0 +1,95 @@
+# VEIL production stack: PostgreSQL + VEIL server (also serves the web app) + Caddy.
+#
+# Logging: container stdout/stderr is the only log channel.
+#  - caddy:    logging driver "none" (and Caddy itself discards logs, see Caddyfile)
+#  - veil:     "local" with small rotation; the app only prints startup lines and
+#              error codes (never request data, IPs, tokens or bodies)
+#  - postgres: "local"; connection/statement logging disabled via command flags
+# Do NOT attach log shippers, APM agents or error trackers to this stack.
+
+services:
+  postgres:
+    image: postgres:17.6-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: veil
+      POSTGRES_USER: veil_owner
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      VEIL_APP_DB_PASSWORD: ${VEIL_APP_DB_PASSWORD:?set VEIL_APP_DB_PASSWORD in .env}
+      VEIL_BACKUP_DB_PASSWORD: ${VEIL_BACKUP_DB_PASSWORD:?set VEIL_BACKUP_DB_PASSWORD in .env}
+    command:
+      - postgres
+      - -c
+      - log_connections=off
+      - -c
+      - log_disconnections=off
+      - -c
+      - log_statement=none
+      - -c
+      - log_min_duration_statement=-1
+      - -c
+      - log_min_error_statement=panic
+      - -c
+      - log_line_prefix=
+      - -c
+      - track_activities=off
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./postgres/roles.sh:/docker-entrypoint-initdb.d/10-roles.sh:ro
+    networks: [internal]
+    logging:
+      driver: local
+      options: { max-size: "1m", max-file: "2" }
+
+  veil:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    restart: unless-stopped
+    depends_on: [postgres]
+    environment:
+      NODE_ENV: production
+      VEIL_SERVER_SECRET: ${VEIL_SERVER_SECRET:?set VEIL_SERVER_SECRET in .env}
+      DATABASE_URL: postgres://veil_app:${VEIL_APP_DB_PASSWORD:?set VEIL_APP_DB_PASSWORD}@postgres:5432/veil
+      # Used only at startup to apply migrations as the schema owner.
+      VEIL_MIGRATION_DATABASE_URL: postgres://veil_owner:${POSTGRES_PASSWORD}@postgres:5432/veil
+      VEIL_TRUST_PROXY: "true"
+      VEIL_POW_DIFFICULTY: ${VEIL_POW_DIFFICULTY:-18}
+      VEIL_BACKUP_RETENTION_DAYS: ${VEIL_BACKUP_RETENTION_DAYS:-7}
+    volumes:
+      - blobs:/data
+    networks: [internal, edge]
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    logging:
+      driver: local
+      options: { max-size: "1m", max-file: "2" }
+
+  caddy:
+    image: caddy:2.10.2
+    restart: unless-stopped
+    depends_on: [veil]
+    environment:
+      VEIL_DOMAIN: ${VEIL_DOMAIN:?set VEIL_DOMAIN in .env}
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+    networks: [edge]
+    logging:
+      driver: none
+
+volumes:
+  pgdata:
+  blobs:
+  caddy_data:
+
+networks:
+  internal:
+    internal: true
+  edge:

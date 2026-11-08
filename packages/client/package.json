@@ -1,0 +1,14 @@
+{
+  "name": "@veil/client",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": {
+    "@veil/crypto": "0.1.0",
+    "@veil/shared": "0.1.0"
+  },
+  "devDependencies": {
+    "fake-indexeddb": "6.2.6"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "@veil/crypto",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "dependencies": {
+    "@noble/ciphers": "2.4.0",
+    "@noble/curves": "2.4.0",
+    "@noble/hashes": "2.4.0",
+    "hash-wasm": "4.12.0"
+  }
+}

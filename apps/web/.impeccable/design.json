@@ -1,0 +1,526 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-25T12:30:00Z",
+  "title": "Design System: VEIL",
+  "extensions": {
+    "colorMeta": {
+      "vault-0": {
+        "role": "neutral",
+        "displayName": "Leather Rail",
+        "canonical": "#08140f",
+        "tonalRamp": [
+          "#08140f",
+          "#0c1c16",
+          "#10241d",
+          "#152d25",
+          "#1b372d",
+          "#244337",
+          "#2f5345",
+          "#4f7766"
+        ]
+      },
+      "vault-1": {
+        "role": "neutral",
+        "displayName": "Vault Floor",
+        "canonical": "#0c1c16",
+        "tonalRamp": [
+          "#08140f",
+          "#0c1c16",
+          "#10241d",
+          "#152d25",
+          "#1b372d",
+          "#244337",
+          "#2f5345",
+          "#4f7766"
+        ]
+      },
+      "vault-2": {
+        "role": "neutral",
+        "displayName": "Vault Surface",
+        "canonical": "#10241d",
+        "tonalRamp": [
+          "#08140f",
+          "#0c1c16",
+          "#10241d",
+          "#152d25",
+          "#1b372d",
+          "#244337",
+          "#2f5345",
+          "#4f7766"
+        ]
+      },
+      "vault-3": {
+        "role": "neutral",
+        "displayName": "Raised Green",
+        "canonical": "#152d25",
+        "tonalRamp": [
+          "#08140f",
+          "#0c1c16",
+          "#10241d",
+          "#152d25",
+          "#1b372d",
+          "#244337",
+          "#2f5345",
+          "#4f7766"
+        ]
+      },
+      "vault-4": {
+        "role": "neutral",
+        "displayName": "Hover Green",
+        "canonical": "#1b372d",
+        "tonalRamp": [
+          "#08140f",
+          "#0c1c16",
+          "#10241d",
+          "#152d25",
+          "#1b372d",
+          "#244337",
+          "#2f5345",
+          "#4f7766"
+        ]
+      },
+      "vault-5": {
+        "role": "neutral",
+        "displayName": "Scroll Green",
+        "canonical": "#244337",
+        "tonalRamp": [
+          "#08140f",
+          "#0c1c16",
+          "#10241d",
+          "#152d25",
+          "#1b372d",
+          "#244337",
+          "#2f5345",
+          "#4f7766"
+        ]
+      },
+      "vault-6": {
+        "role": "neutral",
+        "displayName": "Plate Rim",
+        "canonical": "#2f5345",
+        "tonalRamp": [
+          "#08140f",
+          "#0c1c16",
+          "#10241d",
+          "#152d25",
+          "#1b372d",
+          "#244337",
+          "#2f5345",
+          "#4f7766"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Ledger Hairline",
+        "canonical": "#1f3a2f",
+        "tonalRamp": [
+          "#08140f",
+          "#0c1c16",
+          "#10241d",
+          "#152d25",
+          "#1b372d",
+          "#244337",
+          "#2f5345",
+          "#4f7766"
+        ]
+      },
+      "parchment": {
+        "role": "neutral",
+        "displayName": "Parchment",
+        "canonical": "#ede6d3",
+        "tonalRamp": [
+          "#2e2a20",
+          "#4a4434",
+          "#6b634d",
+          "#8e8569",
+          "#b0a789",
+          "#cfc6ab",
+          "#ede6d3",
+          "#f8f4ea"
+        ]
+      },
+      "parchment-muted": {
+        "role": "neutral",
+        "displayName": "Muted Sage",
+        "canonical": "#a9bbb0",
+        "tonalRamp": [
+          "#1e2622",
+          "#33403a",
+          "#4b5c53",
+          "#66786e",
+          "#839a8d",
+          "#a9bbb0",
+          "#c9d6ce",
+          "#e6eee9"
+        ]
+      },
+      "parchment-faint": {
+        "role": "neutral",
+        "displayName": "Faint Sage",
+        "canonical": "#839a8d",
+        "tonalRamp": [
+          "#1e2622",
+          "#33403a",
+          "#4b5c53",
+          "#66786e",
+          "#839a8d",
+          "#a9bbb0",
+          "#c9d6ce",
+          "#e6eee9"
+        ]
+      },
+      "brass": {
+        "role": "primary",
+        "displayName": "Engraved Brass",
+        "canonical": "#c9a45c",
+        "tonalRamp": [
+          "#2c2210",
+          "#4a3a1c",
+          "#6f5420",
+          "#8a6a2c",
+          "#9b7a3c",
+          "#c9a45c",
+          "#e2c588",
+          "#f4e6c4"
+        ]
+      },
+      "brass-strong": {
+        "role": "primary",
+        "displayName": "Polished Brass",
+        "canonical": "#e2c588",
+        "tonalRamp": [
+          "#2c2210",
+          "#4a3a1c",
+          "#6f5420",
+          "#8a6a2c",
+          "#9b7a3c",
+          "#c9a45c",
+          "#e2c588",
+          "#f4e6c4"
+        ]
+      },
+      "brass-ink": {
+        "role": "primary",
+        "displayName": "Brass Ink",
+        "canonical": "#13201a",
+        "tonalRamp": [
+          "#08140f",
+          "#0c1c16",
+          "#10241d",
+          "#152d25",
+          "#1b372d",
+          "#244337",
+          "#2f5345",
+          "#4f7766"
+        ]
+      },
+      "verdigris": {
+        "role": "secondary",
+        "displayName": "Verdigris",
+        "canonical": "#86c9ab",
+        "tonalRamp": [
+          "#0f2a1f",
+          "#1a4434",
+          "#2d7a5b",
+          "#4b9a7a",
+          "#6bb393",
+          "#86c9ab",
+          "#addbc5",
+          "#d6eee2"
+        ]
+      },
+      "copper": {
+        "role": "tertiary",
+        "displayName": "Copper",
+        "canonical": "#e3a072",
+        "tonalRamp": [
+          "#2e1a0b",
+          "#5a3416",
+          "#9a5a22",
+          "#bd7742",
+          "#d38d5c",
+          "#e3a072",
+          "#efc19f",
+          "#f8e1cf"
+        ]
+      },
+      "oxblood": {
+        "role": "tertiary",
+        "displayName": "Oxblood",
+        "canonical": "#e0847a",
+        "tonalRamp": [
+          "#2e100d",
+          "#5a1f1a",
+          "#852a22",
+          "#a2382e",
+          "#c4594f",
+          "#e0847a",
+          "#efa197",
+          "#f8d3ce"
+        ]
+      },
+      "oxblood-strong": {
+        "role": "tertiary",
+        "displayName": "Oxblood Hover",
+        "canonical": "#efa197",
+        "tonalRamp": [
+          "#2e100d",
+          "#5a1f1a",
+          "#852a22",
+          "#a2382e",
+          "#c4594f",
+          "#e0847a",
+          "#efa197",
+          "#f8d3ce"
+        ]
+      },
+      "bubble-out": {
+        "role": "neutral",
+        "displayName": "Outgoing Green",
+        "canonical": "#24372a",
+        "tonalRamp": [
+          "#08140f",
+          "#0c1c16",
+          "#10241d",
+          "#152d25",
+          "#1b372d",
+          "#244337",
+          "#2f5345",
+          "#4f7766"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Welcome/intro headline only, max 14ch."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Page and flow h1."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "h2 section headings."
+      },
+      "title-sm": {
+        "displayName": "Small Title",
+        "purpose": "h3 headings and the conversation header name."
+      },
+      "name": {
+        "displayName": "Name",
+        "purpose": "Contact names in the conversation list."
+      },
+      "numerals": {
+        "displayName": "Numerals",
+        "purpose": "Safety-number digits and counts a person compares."
+      },
+      "wordmark": {
+        "displayName": "Wordmark",
+        "purpose": "The VEIL wordmark in capitals."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text; ledes capped at 56-60ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, field labels, navigation."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Hints, connection state, status lines."
+      },
+      "key": {
+        "displayName": "Key",
+        "purpose": "Recovery keys and link codes only."
+      }
+    },
+    "shadows": [
+      {
+        "name": "overlay",
+        "value": "0 1px 0 rgba(255,255,255,0.04) inset, 0 18px 40px -12px rgba(0,0,0,0.6)",
+        "purpose": "Dialogs, the overlaid side panel and the safety-number plate."
+      },
+      {
+        "name": "overlay-light",
+        "value": "0 1px 2px rgba(20,36,29,0.08), 0 16px 36px -14px rgba(20,36,29,0.25)",
+        "purpose": "Overlay shadow in the light variant."
+      },
+      {
+        "name": "plate-rim",
+        "value": "inset 0 0 0 1px #2f5345",
+        "purpose": "Engraved rim of other people's plates (own plate uses brass-strong)."
+      },
+      {
+        "name": "brass-hairline",
+        "value": "inset 0 0 0 1px rgba(201,164,92,0.5)",
+        "purpose": "Rim of your identity panel, the generated-name display and the safety-number plate."
+      },
+      {
+        "name": "focus-ring-field",
+        "value": "0 0 0 3px rgba(201,164,92,0.14)",
+        "purpose": "Brass-soft halo on focused inputs and the composer."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "All state transitions."
+      },
+      {
+        "name": "dur",
+        "value": "180ms",
+        "purpose": "Default transition duration; 0ms under prefers-reduced-motion."
+      },
+      {
+        "name": "spin",
+        "value": "0.9s linear infinite",
+        "purpose": "Spinner and active progress step."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "panel-overlay",
+        "value": "1100px"
+      },
+      {
+        "name": "intro-stack",
+        "value": "860px"
+      },
+      {
+        "name": "single-pane",
+        "value": "760px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single brass action on a screen.",
+      "html": "<button class=\"ds-btn ds-btn-primary\">Numbers match</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:0 16px;border:1px solid var(--border-strong,#2f5345);border-radius:12px;background:var(--surface-2,#152d25);color:var(--text,#ede6d3);font-family:'Hanken Grotesk Variable',system-ui,sans-serif;font-size:.875rem;font-weight:500;cursor:pointer;transition:background 180ms cubic-bezier(.16,1,.3,1),border-color 180ms cubic-bezier(.16,1,.3,1),color 180ms cubic-bezier(.16,1,.3,1)}.ds-btn:focus-visible{outline:2px solid var(--focus,#e2c588);outline-offset:2px}.ds-btn-primary{background:var(--brass,#c9a45c);border-color:var(--brass,#c9a45c);color:var(--brass-ink,#13201a)}.ds-btn-primary:hover{background:var(--brass-strong,#e2c588);border-color:var(--brass-strong,#e2c588)}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Default green slab for every non-primary action.",
+      "html": "<button class=\"ds-btn\">Copy key</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:0 16px;border:1px solid var(--border-strong,#2f5345);border-radius:12px;background:var(--surface-2,#152d25);color:var(--text,#ede6d3);font-family:'Hanken Grotesk Variable',system-ui,sans-serif;font-size:.875rem;font-weight:500;cursor:pointer;transition:background 180ms cubic-bezier(.16,1,.3,1),border-color 180ms cubic-bezier(.16,1,.3,1),color 180ms cubic-bezier(.16,1,.3,1)}.ds-btn:focus-visible{outline:2px solid var(--focus,#e2c588);outline-offset:2px}.ds-btn:hover{background:var(--surface-3,#1b372d)}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Low-emphasis action without a frame.",
+      "html": "<button class=\"ds-btn ds-btn-ghost\">Not now</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:0 16px;border:1px solid var(--border-strong,#2f5345);border-radius:12px;background:var(--surface-2,#152d25);color:var(--text,#ede6d3);font-family:'Hanken Grotesk Variable',system-ui,sans-serif;font-size:.875rem;font-weight:500;cursor:pointer;transition:background 180ms cubic-bezier(.16,1,.3,1),border-color 180ms cubic-bezier(.16,1,.3,1),color 180ms cubic-bezier(.16,1,.3,1)}.ds-btn:focus-visible{outline:2px solid var(--focus,#e2c588);outline-offset:2px}.ds-btn-ghost{background:transparent;border-color:transparent;color:var(--text-muted,#a9bbb0)}.ds-btn-ghost:hover{background:var(--surface-2,#152d25);color:var(--text,#ede6d3)}"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Oxblood hairline for destructive acts such as Panic Reset.",
+      "html": "<button class=\"ds-btn ds-btn-danger\">Start Panic Reset</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:0 16px;border:1px solid var(--border-strong,#2f5345);border-radius:12px;background:var(--surface-2,#152d25);color:var(--text,#ede6d3);font-family:'Hanken Grotesk Variable',system-ui,sans-serif;font-size:.875rem;font-weight:500;cursor:pointer;transition:background 180ms cubic-bezier(.16,1,.3,1),border-color 180ms cubic-bezier(.16,1,.3,1),color 180ms cubic-bezier(.16,1,.3,1)}.ds-btn:focus-visible{outline:2px solid var(--focus,#e2c588);outline-offset:2px}.ds-btn-danger{background:transparent;border-color:var(--danger,#e0847a);color:var(--danger,#e0847a)}.ds-btn-danger:hover{background:var(--danger-soft,rgba(224,132,122,.12));color:var(--danger-strong,#efa197)}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Vault-2 field with brass focus.",
+      "html": "<input class=\"ds-input\" placeholder=\"Username, e.g. VelvetFalcon\">",
+      "css": ".ds-input{width:100%;min-height:40px;padding:8px 12px;border:1px solid var(--border-strong,#2f5345);border-radius:12px;background:var(--surface,#10241d);color:var(--text,#ede6d3);font-family:'Hanken Grotesk Variable',system-ui,sans-serif;font-size:1rem;caret-color:var(--brass,#c9a45c);transition:border-color 180ms cubic-bezier(.16,1,.3,1)}.ds-input:hover{border-color:var(--text-faint,#839a8d)}.ds-input:focus-visible{outline:none;border-color:var(--focus,#e2c588);box-shadow:0 0 0 3px var(--brass-soft,rgba(201,164,92,.14))}"
+    },
+    {
+      "name": "Monogram Plates",
+      "kind": "custom",
+      "refersTo": "plate",
+      "description": "Engraved initials; your own plate is brass, everyone else's green.",
+      "html": "<span class=\"ds-plate ds-plate-own\">VF</span> <span class=\"ds-plate\">QO</span>",
+      "css": ".ds-plate{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--g-3,#152d25);box-shadow:inset 0 0 0 1px var(--g-6,#2f5345);color:var(--text,#ede6d3);font-family:Spectral,Georgia,serif;font-weight:500;font-size:.95rem;letter-spacing:.04em}.ds-plate-own{width:48px;height:48px;font-size:1.125rem;background:var(--brass,#c9a45c);box-shadow:inset 0 0 0 1px var(--brass-strong,#e2c588);color:var(--brass-ink,#13201a)}"
+    },
+    {
+      "name": "Conversation Row",
+      "kind": "nav",
+      "refersTo": "plate",
+      "description": "Ruled list row; the selected row fills vault-3 and rings its plate in brass.",
+      "html": "<div class=\"ds-conv\"><div class=\"ds-conv-item\"><span class=\"ds-plate\">QO</span><span class=\"ds-conv-text\"><span class=\"ds-conv-name\">QuietOtter</span><span class=\"ds-conv-prev\">See you at nine</span></span><span class=\"ds-seal\"></span></div><div class=\"ds-conv-item ds-current\"><span class=\"ds-plate\">AM</span><span class=\"ds-conv-text\"><span class=\"ds-conv-name\">AmberMoth</span><span class=\"ds-conv-prev\">Sent the file</span></span><span></span></div></div>",
+      "css": ".ds-conv{background:var(--rail,#08140f);padding:4px 12px;width:300px}.ds-conv-item{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:12px;padding:12px 8px;border-bottom:1px solid var(--border,#1f3a2f);color:var(--text,#ede6d3);cursor:pointer;transition:background 180ms cubic-bezier(.16,1,.3,1)}.ds-conv-item:hover{background:var(--g-2,#10241d)}.ds-conv-item.ds-current{border-radius:12px;border-bottom-color:transparent;background:var(--g-3,#152d25)}.ds-plate{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--g-3,#152d25);box-shadow:inset 0 0 0 1px var(--g-6,#2f5345);font-family:Spectral,Georgia,serif;font-weight:500;font-size:.95rem}.ds-current .ds-plate{box-shadow:inset 0 0 0 1.5px var(--brass,#c9a45c);color:var(--brass-strong,#e2c588)}.ds-conv-text{display:flex;flex-direction:column;min-width:0}.ds-conv-name{font-family:Spectral,Georgia,serif;font-size:1.0625rem;font-weight:500;line-height:1.3}.ds-conv-prev{color:var(--text-muted,#a9bbb0);font-family:'Hanken Grotesk Variable',system-ui,sans-serif;font-size:.875rem}.ds-seal{width:10px;height:10px;border-radius:50%;background:var(--verified,#86c9ab);box-shadow:0 0 0 3px var(--verified-soft,rgba(134,201,171,.13))}"
+    },
+    {
+      "name": "Safety-Number Plate",
+      "kind": "card",
+      "refersTo": "numerals",
+      "description": "Brass-rimmed plate of tabular serif digits for verification.",
+      "html": "<div class=\"ds-account\"><span class=\"ds-account-label\">Shared with QuietOtter</span><div class=\"ds-digits\"><span>05821</span><span>39174</span><span>66203</span><span>18450</span><span>92736</span><span>40118</span></div></div>",
+      "css": ".ds-account{padding:16px 16px 12px;border-radius:16px;background:linear-gradient(165deg,var(--g-4,#1b372d),var(--g-2,#10241d) 75%);box-shadow:inset 0 0 0 1px var(--brass-line,rgba(201,164,92,.5)),var(--shadow,0 18px 40px -12px rgba(0,0,0,.6));color:var(--text,#ede6d3);width:300px}.ds-account-label{display:block;margin-bottom:12px;color:var(--text-muted,#a9bbb0);font-family:'Hanken Grotesk Variable',system-ui,sans-serif;font-size:.78125rem}.ds-digits{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 12px;font-family:Spectral,Georgia,serif;font-size:1.1875rem;font-weight:500;font-variant-numeric:tabular-nums lining-nums;letter-spacing:.05em}"
+    },
+    {
+      "name": "Ruled Section and Danger Zone",
+      "kind": "card",
+      "refersTo": "button-danger",
+      "description": "Hairline-ruled sections; danger swaps the rule to oxblood.",
+      "html": "<section class=\"ds-section\"><h3>Recovery key</h3><p>Lets you restore this identity on a new device.</p></section><section class=\"ds-section ds-danger\"><h3>Panic Reset</h3><p>Erases this identity everywhere.</p></section>",
+      "css": ".ds-section{padding:24px 0;border-top:1px solid var(--border,#1f3a2f);color:var(--text-muted,#a9bbb0);font-family:'Hanken Grotesk Variable',system-ui,sans-serif;max-width:420px}.ds-section h3{margin:0 0 12px;color:var(--text,#ede6d3);font-family:Spectral,Georgia,serif;font-weight:500;font-size:1.25rem}.ds-section p{margin:0}.ds-danger{padding:16px 0;border-top-color:var(--danger,#e0847a)}.ds-danger h3{color:var(--danger,#e0847a)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Numbered Account",
+    "overview": "**Creative North Star: \"The Numbered Account\"**\n\nVEIL is set like a private bank vault: a single ramp of bottle green carries every surface, parchment carries the words, and brass is the engraved metal reserved for the one thing that belongs to you. Your identity is a monogram plate and a name set in an engraved serif; the people you talk to are quieter green plates on ruled lines. Nothing floats; sections are separated by hairlines the way entries are separated in a ledger.\n\nThe mood is calm, discreet and deliberate. Density is moderate: a 324px leather-dark rail, a conversation stage, and an on-demand verification panel. Interface chrome speaks in a quiet grotesk so the serif can be reserved for names, headings and numbers. Dangerous acts are set in oxblood hairlines and stay unhurried.\n\nThe system rejects the grey generic-messenger look and the neon-terminal privacy costume. Dark is the default; a parchment light variant follows `prefers-color-scheme` with the same roles.",
+    "keyCharacteristics": [
+      "One green tonal ramp for every neutral; no grey.",
+      "Brass only for your own plate, primary actions, the selected-plate ring and focus.",
+      "Verdigris means verified, oxblood means danger, copper means warning. Nothing else gets colour.",
+      "Spectral for names, headings and numbers; Hanken Grotesk for UI; IBM Plex Mono only for recovery keys and link codes.",
+      "Hairline-ruled sections and lists instead of padded floating cards."
+    ],
+    "rules": [
+      {
+        "name": "The Two Jobs Rule",
+        "body": "Brass marks only what is yours and what is chosen: your plate, the primary action, the selected-plate ring and focus. If brass appears anywhere else, it is a mistake.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Meaning Rule",
+        "body": "Verdigris is \"verified\", oxblood is \"danger\", copper is \"warning\". A signal colour never decorates and never stands in for another state.",
+        "section": "colors"
+      },
+      {
+        "name": "The Engraving Rule",
+        "body": "Serif is for names, headings and numbers; grotesk for everything you operate. Never set a button or label in Spectral.",
+        "section": "typography"
+      },
+      {
+        "name": "The Copy-Exact Rule",
+        "body": "Monospace exists only for strings a person must transcribe: recovery keys and link codes.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ruled Ledger Rule",
+        "body": "Sections, notices, the existence note and the danger zone are separated by hairlines, top and bottom, with no fill and no radius. A container gets a fill only when it is a plate.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do derive every neutral from the vault ramp (`vault-0` to `vault-6`) and the hairline.",
+      "Do keep brass to your plate, primary actions, the selected-plate ring and focus.",
+      "Do separate sections, notices and danger zones with 1px hairlines and no fill.",
+      "Do set names, headings and numbers in Spectral 500, and tabular lining figures for any digits a person compares.",
+      "Do show your identity as the brass monogram plate and others as green plates.",
+      "Do keep the light variant role-for-role identical to dark."
+    ],
+    "donts": [
+      "Don't use verdigris for anything but \"verified\", or oxblood for anything but danger.",
+      "Don't wrap ruled sections in padded, rounded, filled cards.",
+      "Don't use monospace for usernames, labels or body text.",
+      "Don't add generated patterns or colours to contact plates.",
+      "Don't set UI controls in the serif.",
+      "Don't introduce grey neutrals or a second accent hue."
+    ]
+  }
+}

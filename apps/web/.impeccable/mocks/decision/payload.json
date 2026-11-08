@@ -1,0 +1,100 @@
+{
+  "title": "VEIL: choose the visual world",
+  "question": "The roll assigned Numbered Account. Keep it, take my pick or the standard look, or re-roll.",
+  "options": [
+    {
+      "id": "assigned",
+      "kind": "assigned",
+      "label": "Numbered Account",
+      "kicker": "THE ROLL",
+      "lineage": "Swiss numbered accounts and safe-deposit vaults",
+      "thesis": "Your identity is an engraved number on a brass plate; everything else stays in the vault.",
+      "palette": ["#10241e", "#163128", "#c9a45c", "#ede6d3", "#8fa89a", "#b5524a"],
+      "materials": ["engraved brass plates", "bottle-green leather", "machined vault dial"],
+      "viewport": "Green leather rail with your own brass name plate on top, conversations as plates below, the open conversation on a deep vault ground.",
+      "risk": "Can tip into private-bank luxury if brass spreads beyond its one job.",
+      "raised": [
+        { "from": "challenger-high-density", "raise": "Hairline-ruled lists replace padded floating cards; the screen stops looking empty." },
+        { "from": "challenger-orienteering", "raise": "Brass is reserved for one job: your own identity and the active selection." },
+        { "from": "challenger-zone-sheets", "raise": "All neutrals come from one strict tonal ramp of the vault green." },
+        { "from": "challenger-transit", "raise": "State colours appear only where they carry meaning: a key change, a failure, verified." }
+      ],
+      "html": ".impeccable/mocks/decision/assigned.html"
+    },
+    {
+      "id": "model-pick",
+      "kind": "pick",
+      "label": "Passport",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "passport covers and guilloche security printing",
+      "thesis": "An identity document that names no one: navy cover, gold foil, a guilloche seal per person.",
+      "palette": ["#121c33", "#1a2744", "#d4b26a", "#e9e4d6", "#7f8bab"],
+      "materials": ["gold foil", "guilloche line work", "embossed cover board"],
+      "viewport": "Navy shell, each contact sealed with a fine guilloche rosette, safety numbers set like a document number.",
+      "risk": "Guilloche can read as busy line noise again, and as government paperwork.",
+      "html": ".impeccable/mocks/decision/model-pick.html"
+    },
+    {
+      "id": "challenger-goods", "kind": "challenger", "catalogId": "pop-culture-shelf-character-goods-catalog",
+      "label": "Character Goods Catalog", "verdict": "declined",
+      "lineage": "mascot goods catalogs", "thesis": "Contacts as a ranked cast of mascots.",
+      "palette": ["#fde2e4", "#cde7f0", "#ffd166"], "materials": ["flat pastel fills", "white keylines"],
+      "viewport": "A pastel roster grid.", "case": "Playful and colourful, which the brief rules out.",
+      "risk": "Breaks the seriousness VEIL needs.", "kept": "Every contact carries the same fixed name-plate furniture."
+    },
+    {
+      "id": "challenger-high-density", "kind": "challenger", "catalogId": "japanese-high-density-web",
+      "label": "High-density Web", "verdict": "declined",
+      "lineage": "Japanese high-density portals", "thesis": "Pack the screen with ruled modules.",
+      "palette": ["#ffffff", "#111111", "#d7262e"], "materials": ["hairline rules", "boxed modules"],
+      "viewport": "A dense white mosaic.", "case": "Bright white and crowded; VEIL is dark-first and calm.",
+      "risk": "Overwhelms people under stress.", "kept": "Hairline-ruled density instead of empty padded cards."
+    },
+    {
+      "id": "challenger-transit", "kind": "challenger", "catalogId": "wayfinding-cartography-signage-midnight-transit-diagram",
+      "label": "Midnight Transit Diagram", "verdict": "declined",
+      "lineage": "enamel metro maps", "thesis": "Conversations as coloured lines.",
+      "palette": ["#121a3a", "#e63946", "#2a6fdb", "#f4a261"], "materials": ["enamel", "porcelain ticks"],
+      "viewport": "Lines meeting at interchanges.", "case": "Pretty, but a messenger is not a network map; clarity loses.",
+      "risk": "Colourful lines read as playful.", "kept": "Disciplined state colours that only ever mean one thing."
+    },
+    {
+      "id": "challenger-orienteering", "kind": "challenger", "catalogId": "notation-diagram-systems-orienteering-map",
+      "label": "Orienteering Map", "verdict": "declined",
+      "lineage": "ISOM orienteering maps", "thesis": "A fixed terrain with one reserved course colour.",
+      "palette": ["#ffffff", "#c8d89b", "#a0522d", "#b04fbf"], "materials": ["contour lines", "overprint purple"],
+      "viewport": "Contours under a purple course.", "case": "Light, outdoorsy; nobody here identifies with it.",
+      "risk": "Wrong world entirely.", "kept": "One colour reserved for exactly one job."
+    },
+    {
+      "id": "challenger-jcard", "kind": "challenger", "catalogId": "vernacular-ephemera-cassette-j-card",
+      "label": "Cassette J-card", "verdict": "declined",
+      "lineage": "hand-lettered mixtape inlays", "thesis": "Handwritten, personal, ballpoint.",
+      "palette": ["#f8f8f2", "#1d3b8a", "#c8102e"], "materials": ["ballpoint", "lined inlay"],
+      "viewport": "A folded tracklist.", "case": "Nostalgic and casual; undermines trust.",
+      "risk": "Reads as a toy.", "kept": "Tight right-aligned metadata instead of loose labels."
+    },
+    {
+      "id": "challenger-zone-sheets", "kind": "challenger", "catalogId": "operate-b-exposure-record-zone-sheets",
+      "label": "Exposure Record", "verdict": "declined",
+      "lineage": "darkroom exposure records", "thesis": "Stacked translucent sheets over a zone ramp.",
+      "palette": ["#1b1b1b", "#7a7a7a", "#e6e6e6", "#d0378f"], "materials": ["tracing paper", "hatching"],
+      "viewport": "Overlapping sheets.", "case": "Elegant system, but overlapping sheets fight a chat layout.",
+      "risk": "Costume on a working screen.", "kept": "Neutrals from one strict tonal ramp."
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code" },
+  "canon": true,
+  "canonCard": {
+    "kind": "canon",
+    "label": "The category standard",
+    "thesis": "What a polished messenger ships, executed cleanly.",
+    "palette": ["#1b1c1f", "#2a2c31", "#3a76f0", "#e9eaec"],
+    "materials": ["flat surfaces", "round avatars", "blue accent"],
+    "viewport": "Familiar list and conversation, nothing to learn.",
+    "risk": "Indistinguishable from other messengers by design.",
+    "html": ".impeccable/mocks/decision/canon.html"
+  },
+  "steer": true
+}

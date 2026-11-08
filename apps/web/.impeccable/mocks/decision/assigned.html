@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>VEIL – Numbered Account</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+:root{--g0:#0a1814;--g1:#0e211b;--g2:#132b23;--g3:#1a372d;--g4:#244639;--line:#21392f;--brass:#c9a45c;--brass2:#e2c588;--ink:#ede6d3;--mute:#93a99c;--faint:#62786c;--red:#c4655b}
+*{box-sizing:border-box;margin:0}
+body{width:1440px;height:900px;overflow:hidden;background:var(--g1);color:var(--ink);font:15px/1.5 'Hanken Grotesk',system-ui,sans-serif}
+.app{display:grid;grid-template-columns:330px 1fr 340px;height:900px}
+.rail{background:var(--g0);border-right:1px solid var(--line);display:flex;flex-direction:column}
+.me{padding:26px 24px 22px;border-bottom:1px solid var(--line)}
+.mark{font:600 13px 'Hanken Grotesk';letter-spacing:.32em;color:var(--mute);margin-bottom:22px}
+.plate{display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:14px;background:linear-gradient(160deg,#1c3a2f,#122a22);box-shadow:inset 0 0 0 1px rgba(201,164,92,.55),inset 0 1px 0 rgba(255,255,255,.06)}
+.mono{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font:500 17px Spectral,serif;color:var(--g0);background:radial-gradient(circle at 35% 30%,#ecd59c,#b08a43);box-shadow:0 1px 0 rgba(0,0,0,.4)}
+.plate .n{font:500 21px/1.1 Spectral,serif;letter-spacing:.01em}
+.plate .s{font-size:12px;color:var(--mute)}
+.find{padding:16px 24px 10px}
+.find input{width:100%;height:40px;border-radius:10px;border:1px solid var(--line);background:var(--g1);color:var(--ink);padding:0 14px;font:inherit}
+.find p{font-size:12px;color:var(--faint);margin-top:8px}
+.list{list-style:none;padding:6px 12px}
+.row{display:grid;grid-template-columns:40px 1fr auto;gap:12px;align-items:center;padding:12px;border-bottom:1px solid var(--line)}
+.row.on{background:var(--g2);border-radius:12px;border-color:transparent;box-shadow:inset 3px 0 0 var(--brass)}
+.dot{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;font:500 15px Spectral,serif;color:var(--ink);background:var(--g3);box-shadow:inset 0 0 0 1px var(--g4)}
+.row.on .dot{box-shadow:inset 0 0 0 1.5px var(--brass);color:var(--brass2)}
+.row b{font:500 16px Spectral,serif;display:block}
+.row span{font-size:13px;color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;max-width:200px}
+.cnt{min-width:20px;height:20px;border-radius:10px;background:var(--brass);color:var(--g0);font:600 11px/20px 'Hanken Grotesk';text-align:center}
+.warn{font-size:11px;color:var(--red)}
+.main{display:flex;flex-direction:column}
+.head{height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;border-bottom:1px solid var(--line)}
+.head .who{display:flex;gap:14px;align-items:center}
+.head b{font:500 20px Spectral,serif}
+.head small{display:block;color:var(--mute);font-size:12px}
+.btn{height:36px;padding:0 16px;border-radius:10px;border:1px solid var(--g4);background:var(--g2);color:var(--ink);font:500 13px 'Hanken Grotesk'}
+.msgs{flex:1;padding:28px 40px;display:flex;flex-direction:column;gap:10px}
+.sys{align-self:center;font-size:12px;color:var(--faint);margin:6px 0 14px}
+.m{max-width:520px;padding:11px 16px;border-radius:18px;font-size:15px}
+.in{background:var(--g2);border-bottom-left-radius:6px}
+.out{align-self:flex-end;background:#2a3a2a;box-shadow:inset 0 0 0 1px rgba(201,164,92,.28);border-bottom-right-radius:6px}
+.out i{font-style:normal;color:var(--brass);font-size:11px;margin-left:10px}
+.comp{margin:0 28px 26px;height:52px;border-radius:16px;border:1px solid var(--g4);background:var(--g0);display:flex;align-items:center;padding:0 8px 0 18px;color:var(--faint)}
+.comp .send{margin-left:auto;width:38px;height:38px;border-radius:12px;background:var(--brass)}
+.side{background:var(--g0);border-left:1px solid var(--line);padding:26px 24px}
+.side h3{font:500 20px Spectral,serif;margin-bottom:6px}
+.side p{font-size:13px;color:var(--mute);margin-bottom:18px}
+.acct{border-radius:14px;padding:18px 18px 16px;background:linear-gradient(160deg,#1c3a2f,#10251e);box-shadow:inset 0 0 0 1px rgba(201,164,92,.55)}
+.acct .l{font-size:11px;color:var(--brass);margin-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px 14px;font:500 18px/1.3 Spectral,serif;font-variant-numeric:tabular-nums;letter-spacing:.04em}
+.ok{margin-top:18px;width:100%;height:42px;border-radius:12px;border:0;background:var(--brass);color:var(--g0);font:600 14px 'Hanken Grotesk'}
+</style></head><body><div class="app">
+<aside class="rail">
+ <div class="me"><div class="mark">VEIL</div>
+  <div class="plate"><div class="mono">VF</div><div><div class="n">VelvetFalcon</div><div class="s">Your number. Share it yourself.</div></div></div></div>
+ <div class="find"><input placeholder="Username, e.g. SilentComet"><p>If this person exists, they will receive your messages.</p></div>
+ <ul class="list">
+  <li class="row on"><div class="dot">SC</div><div><b>SilentComet</b><span>Let us compare numbers when we meet.</span></div><div></div></li>
+  <li class="row"><div class="dot">QM</div><div><b>QuantumMango</b><span>Got the file, thank you.</span></div><div class="cnt">2</div></li>
+  <li class="row"><div class="dot">AH</div><div><b>AmberHeron</b><span class="warn">Safety number changed</span></div><div></div></li>
+  <li class="row"><div class="dot">QO</div><div><b>QuietOtter</b><span>Are you there?</span></div><div></div></li>
+ </ul>
+</aside>
+<main class="main">
+ <div class="head"><div class="who"><div class="dot">SC</div><div><b>SilentComet</b><small>Not verified</small></div></div><button class="btn">Verify</button></div>
+ <div class="msgs">
+  <div class="sys">Encrypted conversation started</div>
+  <div class="m out">Hi. This one is end-to-end encrypted.<i>✓</i></div>
+  <div class="m out">No timestamps, nothing stored about when we talk.<i>✓</i></div>
+  <div class="m in">Good. I read the safety number to you on the phone tonight?</div>
+  <div class="m in">Let us compare numbers when we meet.</div>
+  <div class="m out">Deal. Bring the twelve groups.<i>✓</i></div>
+ </div>
+ <div class="comp">Message SilentComet<div class="send"></div></div>
+</main>
+<aside class="side"><h3>Safety number</h3><p>You and SilentComet see the same twelve groups. If they match, nobody is in between.</p>
+ <div class="acct"><div class="l">Shared number</div><div class="grid"><span>57350</span><span>11450</span><span>91515</span><span>39960</span><span>60405</span><span>93053</span><span>80348</span><span>48299</span><span>85839</span><span>98358</span><span>82142</span><span>87534</span></div></div>
+ <button class="ok">Numbers match</button></aside>
+</div></body></html>
